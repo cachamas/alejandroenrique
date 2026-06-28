@@ -127,15 +127,16 @@ main {
 .popup-stage {
   position: relative;
   min-height: 120vh;
-  overflow: visible;
+  overflow-x: hidden;
+  overflow-y: visible;
   padding-top: 0.4rem;
   margin-top: -0.8rem;
 }
 
 .art-popup {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: auto;
+  top: auto;
   width: var(--popup-width, 390px);
   max-width: calc(100vw - 2rem);
   padding: 0;
@@ -341,6 +342,7 @@ main {
 
 body.popup-open {
   overflow: hidden;
+  width: 100%;
 }
 
 .page-shell {
