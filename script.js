@@ -103,10 +103,10 @@ function getRandomPosition({ biasCenterTop = false } = {}) {
 }
 
 function clampPopupToStage(popup, x, y) {
-  const minX = 24;
+  const minX = -200;
   const minY = getSafeTopInset();
-  const maxX = Math.max(minX, (stage?.clientWidth || window.innerWidth) - popup.offsetWidth - minX);
-  const maxY = Math.max(minY, (stage?.clientHeight || window.innerHeight) - popup.offsetHeight - minX);
+  const maxX = Math.max(minX, (stage?.clientWidth || window.innerWidth) - popup.offsetWidth + 200);
+  const maxY = Math.max(minY, (stage?.clientHeight || window.innerHeight) - popup.offsetHeight);
   const clampedX = Math.min(maxX, Math.max(minX, x));
   const clampedY = Math.min(maxY, Math.max(minY, y));
   popup.style.left = `${clampedX}px`;
