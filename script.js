@@ -43,7 +43,7 @@ const artworkDefinitions = {
   mural: { title: 'HAVEN', subtitle: '2m x 4.5m [6\'6" x 14\'9"]', description: 'April 2022' },
   WEIWEI: { title: 'WEIWEI', subtitle: "27.9cm x 21.6cm [11' x 8.5']", description: 'November 2023' },
   mickey: { title: 'MICKEY', subtitle: "14.8cm x 10.5cm [5.83\" x 4.13\"]", description: '2020' },
-  GHOSTS: { title: 'GHOSTS', subtitle: "14.8cm x 10.5cm [5.83\" x 4.13\"]", description: 'June 2026' },
+  ghosts: { title: 'GHOSTS', subtitle: "Digital commission for Cragma", description: 'June 2026' },
   samurai: { title: 'MINAMOTO', subtitle: 'Digital commission for Hal', description: '2021' },
   selknam: { title: 'SELKNAM', subtitle: '21cm x 14.8cm [8.27\" x 5.8\"]', description: 'February 2022' },
   tarako: { title: 'TARAKO', subtitle: '45cm x 71cm [18\" x 28\"]', description: 'March 2026' },
@@ -151,6 +151,7 @@ function removePopup(popup, { respawn = false, delay = 2000 } = {}) {
   if (activePopup === popup) {
     activePopup = null;
     document.body.classList.remove('popup-open');
+    document.documentElement.classList.remove('popup-open');
   }
 
   syncStageHeight();
@@ -216,6 +217,7 @@ function closeModal() {
   if (!modalOverlay) return;
   modalOverlay.classList.remove('open');
   document.body.classList.remove('popup-open');
+  document.documentElement.classList.remove('popup-open');
   activePopup = null;
 }
 
@@ -259,6 +261,7 @@ function openModal(src, filename) {
 
   overlay.classList.add('open');
   document.body.classList.add('popup-open');
+  document.documentElement.classList.add('popup-open');
 }
 
 function createPopup() {
@@ -399,6 +402,7 @@ function createPopup() {
     if (event.key === 'Escape') {
       popup.classList.remove('expanded');
       document.body.classList.remove('popup-open');
+      document.documentElement.classList.remove('popup-open');
       activePopup = null;
     }
   });
