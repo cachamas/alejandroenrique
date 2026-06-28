@@ -1,0 +1,1 @@
+ cd "c:\Users\dm\OneDrive\Desktop\gct and art\portfolio2.0\alejandroenrique"; python -m http.server 8000 --bind 127.0.0.1

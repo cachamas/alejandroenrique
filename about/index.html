@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me | Alejandro Enrique</title>
+    <link rel="icon" href="../images/logo/header.webp" />
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      main {
+        flex: 1;
+        display: grid;
+        place-items: center;
+        padding: 3rem 1.25rem;
+      }
+
+      .placeholder-panel {
+        max-width: 720px;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        border: 0;
+        box-shadow: none;
+        text-align: left;
+      }
+
+      .about-grid {
+        max-width: 920px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr min(360px, 40%);
+        gap: 1.5rem;
+        align-items: start;
+      }
+
+      .about-text {
+        padding: 0.25rem 0;
+      }
+
+      .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 0;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+      }
+
+      .section-divider {
+        border: 0;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+        margin: 0.9rem 0 1rem;
+      }
+
+      .external-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .external-links a {
+        color: #8fb9ff;
+        text-decoration: underline;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .cachama-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .muted-caption {
+        margin-top: 0.25rem;
+        font-size: 0.68rem;
+        color: rgba(255,255,255,0.45);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      @media (max-width: 720px) {
+        .about-grid {
+          grid-template-columns: 1fr;
+        }
+        .brand-stack {
+          align-items: center;
+        }
+      }
+
+      .placeholder-panel p {
+        font-family: "Avenir Next", "Inter", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+        font-size: clamp(1rem, 1.6vw, 1.15rem);
+        line-height: 1.8;
+        margin: 0 0 0.8rem;
+        color: #ece7dd;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-stack">
+        <a class="brand" href="../" aria-label="Home">
+          <img src="../images/logo/header.webp" alt="Alejandro Enrique logo" />
+        </a>
+        <a class="back-home-link" href="../" aria-label="Back to homepage">← BACK</a>
+      </div>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="../contact/">CONTACT</a>
+        <a href="./">ABOUT ME</a>
+        <a href="https://gov.info.ve" target="_blank" rel="noopener noreferrer">FULL PORTFOLIO → </a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about-grid" aria-label="About content">
+        <div class="about-text placeholder-panel">
+          <p>ALEJANDRO ENRIQUE MEDINA VELASQUEZ, multimedia artist.</p>
+          <p>Venezuelan artist with over 20 years experience in mixed medium design and interactive digital installations.</p>
+          <p>Professional experience in officially licensed merch design for VALVE, MARVEL, STAR WARS, GOAT SIMULATOR; among other works.</p>
+          <p>Music producer, sound designer, expert in ORCA (EsoLANG), fluent in Spanish, Portuguese, English.</p>
+          <p>A.K.A. <strong>Venezuelan Government</strong> (ARTIST)</p>
+          <div class="external-links" aria-hidden="false">
+            <a class="gov-link" href="https://gov.info.ve" target="_blank" rel="noopener noreferrer">GOV.INFO.VE</a>
+            <div class="cachama-wrap">
+              <a class="cachama-link" href="https://cachama.com" target="_blank" rel="noopener noreferrer">CACHAMA.COM</a>
+              <div class="muted-caption" aria-hidden="true">(DEFUNCT)</div>
+            </div>
+          </div>
+        </div>
+        <aside class="about-image" aria-hidden="false">
+          <img src="../images/about/about.webp" alt="Alejandro Enrique portrait">
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Alejandro Enrique</p>
+    </footer>
+  </body>
+</html>
